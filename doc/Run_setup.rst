@@ -512,11 +512,12 @@ are dependent on what HPC system you have but for a SLURM system the settings to
 
 once these settings are updated save the file and now you can run the file with your HPC batch system. 
 
-e.g.,  if you are in the MetaDVIE folder and have a slurm system you can run
+e.g.,  if you are in the MetaDIVE folder and have a slurm system you can run, but if you are in the pipeline folder already you can just run sbatch run_snakemake.sh
 
 .. code-block:: console
 
-   sbatch ./pipeline/run_snakemake.sh
+   cd pipeline/
+   sbatch run_snakemake.sh
 
 
 
