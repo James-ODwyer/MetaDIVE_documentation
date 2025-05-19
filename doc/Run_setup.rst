@@ -49,15 +49,14 @@ a specific format to be read correctly. This format can be seen in the below two
 to note that the name of each sample needs to be a part of the file name of a file e.g., if the you write SampleX: the file needs to contain "sampleX" e.g., samplex_R1.fastq.gz 
 if you name the sample myfavouritesample: the file needs to contain "myfavouritesample" e.g., myfavouritesample_R1.fastq.gz.
 But the general pattern is as shown.  
-samples:
+samples:[enter]
+[space][space]sampleX:[enter]
+[space][space][space][space]-[space]/filepath/sampleX_R1.fastq.gz[enter]
+[space][space][space][space]-[space]/filepath/sampleX_R2.fastq.gz[enter]
 
-[space][space]sampleX:
-[space][space][space][space]-[space]/filepath/sampleX_R1.fastq.gz
-[space][space][space][space]-[space]/filepath/sampleX_R2.fastq.gz
-
-[space][space]sampleY:
-[space][space][space][space]-[space]/filepath/sampleY_R1.fastq.gz
-[space][space][space][space]-[space]/filepath/sampleY_R2.fastq.gz
+[space][space]sampleY:[enter]
+[space][space][space][space]-[space]/filepath/sampleY_R1.fastq.gz[enter]
+[space][space][space][space]-[space]/filepath/sampleY_R2.fastq.gz[enter]
 
 
 
