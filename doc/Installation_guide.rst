@@ -120,7 +120,7 @@ The variables to know are batch-system where you specify what batch system your 
 
 partition where you specify how your HPC partitions their compute resources "Any_value" e.g., "long|short|compute|data|".
 
-download_partition where if a specific partition is required to access the internet and download objects give it here (this pipeline downloads host genomes dynamically from NCBI) "download|io|any_other_value".
+download_partition where if a specific partition is required to access the internet and download objects give it here (this pipeline downloads host genomes dynamically from NCBI) "download|io|any_other_value". Note if your system does not have a download specific node, give the value "none"
 
 account where if you are required to give an account/project name to submitted job scripts "labxyz|projectxyz|useridxyz|etc":
 
