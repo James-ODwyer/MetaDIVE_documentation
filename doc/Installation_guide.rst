@@ -124,6 +124,8 @@ download_partition where if a specific partition is required to access the inter
 
 account where if you are required to give an account/project name to submitted job scripts "labxyz|projectxyz|useridxyz|etc":
 
+Finally, depending on how your system is set up you may have to specify nodes/ cpus per node and tasks per node or not have these variables at all. Either write 'yes' to include these as variables or 'no' to exclude them. This set up script has been tested extensively on different slurm systems but may be missing some variables for other batch systems so please let me know if you notice anything missing. 
+
 .. code-block:: console
 
    $ cd MetaDIVE
@@ -131,7 +133,10 @@ account where if you are required to give an account/project name to submitted j
       --batch-system SLURM \
       --partition compute \
       --download_partition io \
-      --account my_lab
+      --account my_lab \
+      --nodes-supported yes \
+      --ntasks-per-node-supported no \
+      --cpus-per-task-supported yes
 
 
 
@@ -182,7 +187,7 @@ These are often very large and it is recommended to use a single centrally locat
 
 To create all other databases all that is needed to do is run **download_and_build_databases.sh** located in the databases directory (MetaDIVE/databases)
 
-The script will take ~ 90-120 minutes to run but will only need to be done once regardless of how many times MetaDIVE is run.
+The script will take ~ 90-180 minutes to run but will only need to be done once regardless of how many times MetaDIVE is run. I have tested this on a personal computer and it took 2.5 hours. Note, if you are keen to move on with the analysis of your data you can start your proper analysis analysis about an hour into the database script build time (while it is still building databases and still running) as the latter databases being built are used only ~1.5 hours into an analysis typically  will be ready by the time the pipeline reaches the required analysis step (some exceptions exist if you run samples with nearly no data as they may finish analysis in less than an hour total).
 
 Assuming you are in the MetaDIVE directory run the following script: 
 
