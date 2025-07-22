@@ -53,6 +53,13 @@ Downloading MetaDIVE
 
 (If conda is already installed you can skip to here)
 
+As of July 2025 Conda requires you to accept the terms of service for different channels. To use conda we accept these terms
+
+.. code-block:: console
+
+   $ conda tos accept
+
+
 Now that conda is available we need to **download gitlfs** to download MetaDIVE correctly
 
 To do that we just use our new conda environment:
